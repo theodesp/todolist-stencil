@@ -23,77 +23,9 @@ declare global {
   interface HTMLAttributes {}
 }
 
-import '@stencil/router';
-
 import {
-  MatchResults,
-} from '@stencil/router';
-
-declare global {
-
-  namespace StencilComponents {
-    interface AppHome {
-
-    }
-  }
-
-  interface HTMLAppHomeElement extends StencilComponents.AppHome, HTMLStencilElement {}
-
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
-  };
-  interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-  }
-  interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      'app-home': JSXElements.AppHomeAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
-
-    }
-  }
-}
-
-
-declare global {
-
-  namespace StencilComponents {
-    interface AppProfile {
-      'match': MatchResults;
-    }
-  }
-
-  interface HTMLAppProfileElement extends StencilComponents.AppProfile, HTMLStencilElement {}
-
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
-  };
-  interface HTMLElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
-  }
-  interface ElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      'app-profile': JSXElements.AppProfileAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
-    }
-  }
-}
-
+  TodoItem,
+} from './models/todoItem';
 
 declare global {
 
@@ -123,6 +55,107 @@ declare global {
   namespace JSXElements {
     export interface MyAppAttributes extends HTMLAttributes {
 
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface TodoApp {
+
+    }
+  }
+
+  interface HTMLTodoAppElement extends StencilComponents.TodoApp, HTMLStencilElement {}
+
+  var HTMLTodoAppElement: {
+    prototype: HTMLTodoAppElement;
+    new (): HTMLTodoAppElement;
+  };
+  interface HTMLElementTagNameMap {
+    'todo-app': HTMLTodoAppElement;
+  }
+  interface ElementTagNameMap {
+    'todo-app': HTMLTodoAppElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'todo-app': JSXElements.TodoAppAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface TodoAppAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface TodoListForm {
+      'todoItemsLength': number;
+    }
+  }
+
+  interface HTMLTodoListFormElement extends StencilComponents.TodoListForm, HTMLStencilElement {}
+
+  var HTMLTodoListFormElement: {
+    prototype: HTMLTodoListFormElement;
+    new (): HTMLTodoListFormElement;
+  };
+  interface HTMLElementTagNameMap {
+    'todo-list-form': HTMLTodoListFormElement;
+  }
+  interface ElementTagNameMap {
+    'todo-list-form': HTMLTodoListFormElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'todo-list-form': JSXElements.TodoListFormAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface TodoListFormAttributes extends HTMLAttributes {
+      'onInputChange'?: (event: CustomEvent) => void;
+      'onSubmit'?: (event: CustomEvent) => void;
+      'todoItemsLength'?: number;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface TodoList {
+      'todoItems': TodoItem[];
+    }
+  }
+
+  interface HTMLTodoListElement extends StencilComponents.TodoList, HTMLStencilElement {}
+
+  var HTMLTodoListElement: {
+    prototype: HTMLTodoListElement;
+    new (): HTMLTodoListElement;
+  };
+  interface HTMLElementTagNameMap {
+    'todo-list': HTMLTodoListElement;
+  }
+  interface ElementTagNameMap {
+    'todo-list': HTMLTodoListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'todo-list': JSXElements.TodoListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface TodoListAttributes extends HTMLAttributes {
+      'todoItems'?: TodoItem[];
     }
   }
 }

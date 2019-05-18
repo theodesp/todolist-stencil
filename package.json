@@ -15,14 +15,15 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "^0.7.27-4",
+    "@stencil/core": "^0.18.1",
     "@stencil/router": "latest"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
     "@stencil/utils": "latest",
-    "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "@types/jest": "^24.0.13",
+    "jest": "^24.8.0",
+    "workbox-build": "3.4.1"
   },
   "repository": {
     "type": "git",
